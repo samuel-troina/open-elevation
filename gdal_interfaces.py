@@ -6,6 +6,8 @@ from os.path import isfile, join, getsize
 import json
 from rtree import index
 
+gdal.UseExceptions()
+
 # Originally based on https://stackoverflow.com/questions/13439357/extract-point-from-raster-in-gdal
 class GDALInterface(object):
     SEA_LEVEL = 0
