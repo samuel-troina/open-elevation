@@ -8,7 +8,6 @@ RUN apt-get update && \
 
 ENV TZ="America/Sao_Paulo"
 
-RUN apt-get update
 RUN apt-get install -y libspatialindex-dev unar bc python3-pip wget
 
 ADD ./requirements.txt .
