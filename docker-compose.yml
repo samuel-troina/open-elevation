@@ -15,4 +15,9 @@ services:
         command: stdbuf -i0 -o0 -e0 python3 server.py
         ports:
             - 8080:8080
+        networks:
+            - minha_rede
 
+networks:
+    minha_rede:
+        external: true
