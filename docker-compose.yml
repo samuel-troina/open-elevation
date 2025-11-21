@@ -10,6 +10,12 @@ services:
             - "./certs:/code/certs"
         environment:
             - PYTHONUNBUFFERED=1
+        networks:
+            - wsn-planner
         command: stdbuf -i0 -o0 -e0 python3 server.py
         ports:
             - 9080:8080
+
+networks:
+  wsn-planner:
+    external: true
